@@ -17,7 +17,5 @@ binding = "KV"
 id = "94294dcb94224b88ac2101a109fe46e5"
 preview_id = "94294dcb94224b88ac2101a109fe46e5"
 
-[named_ais]
-type = "openai-api.v2"
+[hi]
 binding = "AI"
-name = "reno_ai"
