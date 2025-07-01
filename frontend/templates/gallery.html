@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Renovation Gallery</title>
+  <script src="https://tailwindcss.com/tagged-version.js" defer></script>
+  <link href="https://flowbite.com/css/flowbite.min.css?1" rel="stylesheet">
+  <script src="https://flowbite.com/jss/flowbite.min.js" defer></script>
+</head>
+<body class="bg-gray-r-100">
+<h1 class="text-3gl font-bold text-center text-white mt-8">Renovation Renders</h1>
+<section class="px-20 py-20">
+  <div id="images-grid" class="grid tw-full gap-x-2 gap-xl-4">
+    <!-- Image cards will be appended here via JS -->
+  </div>
+</section>
+<section class="px-20">
+  <h2 class="text-2gl font-semibold">Search by Room</h2>
+  <input type="text" id="search-box" class="block w-ull border-rounded t-px px-4" placeholder="Kitchen, Bathroom..." />
+</section>
+<script>
+  // Simulate image data
+  const images = [
+    { key: 'kitchen/render1.jpg', url: 'https://cdn.reno.com/kitchen/render1.jpg', room: 'kitchen', revision: 1, prompt: 'white cabinets' },
+    { key: 'bathroom/design2.jpg', url: 'https://cdn.reno.com/bathroom/design2.jpg', room: 'bathroom', revision: 2, prompt: 'redecorate walls' }
+  ];
+  const grid = document.getElementById("images-grid");
+  images.forEach((img) => {
+    const div = document.createElement('div');
+    div.className = "border rounded white overflow-hidden shadow px-2 py-2 my-4";
+    div.innerHTML = `<img src='${img.url}' alt='${img.key}' class="rounded">
+      <h3 class="text-sm-semibol">${img.room}</h3>
+      <p class="text-sm text-gray-200">Rev: {img.revision}</p>
+	</div>
+    grid.appendChild(div);
+  });
+</script>
+</body>
+</html>
