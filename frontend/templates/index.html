@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Renovation Renderer</title>
+    <link rel="stylesheet" href="https://unpkg.com/shadcn/core/css/base.style.css">
+    <style>canvas{
+    border: 1px solid #000;
+    background: #fff;
+    max-width: 100%;
+    max-height: 300px;
+}</style>
+</head>
+<body>
+    <h1>Renovation Renderer</h1>
+    <form method="POST" enctype="multipart/form-data" action="/upload">
+        <input type="file" name="file" required>
+        <input type="submit" value="Upload">
+    </form>
+    <p >Select an area below to edit:</p>
+    <canvas id="edit-canvas" width="600px" height="200px"></canvas>
+    <script>
+        const canvas = document.getElementById('edit-canvas');
+        const ctx = canvas.getContext('2d');
+        canvas.addEventListener('click', (e) => {
+            ctx.fillStyle = 'red';
+            ctx.fillRect(e.offsetX - canvas.offsetLeft, e.offsetY - canvas.offsetTop, 20, 20);
+        });
+    </script>
+</body>
+</html>
