@@ -16,3 +16,8 @@ database_id = "af8e30dc-0cdf-4a53-8b9e-9545f277dbc2"
 binding = "KV"
 id = "94294dcb94224b88ac2101a109fe46e5"
 preview_id = "94294dcb94224b88ac2101a109fe46e5"
+
+[named_ais]
+type = "openai-api.v2"
+binding = "AI"
+name = "reno_ai"
