@@ -1,0 +1,14 @@
+name: "reno-dream-catcher-worker"
+
+blog: true
+
+compute_platform: fetch
+
+environments:
+  complete:
+    reno: "RENO_BUCKET"
+    dream_catcher: "dur://account/dream-catcher/d1:/af8e30dc-0cdf-4a53-8b9e-9545f277dbc2"
+    deal: "kv:/dream-catcher/94294dcb94224b88ac2101a109fe46e5"
+
+data_path: "./data/index.js"
+duration: null
